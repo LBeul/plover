@@ -13,9 +13,9 @@
 input {
   width: 80%;
   height: 30px;
-  background-color: #cde5e3;
+  background-color: #202121;
   border-radius: 10px;
-  border: none;
+  border: 1px solid #1db954;
   text-align: center;
   font-size: 1em;
   font-family: "Poppins", sans-serif;
@@ -25,10 +25,10 @@ input {
 button {
   width: 80%;
   height: 40px;
-  background-color: #119892;
+  background-color: #1db954;
   border-radius: 10px;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;
   font-weight: 400;

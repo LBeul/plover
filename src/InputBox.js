@@ -4,7 +4,7 @@ import "./InputBox.css";
 function InputBox() {
   return (
     <div className="input-box">
-      <input type="text" placeholder="image" />
+      <input type="text" placeholder="topic" />
       <br />
       <input type="text" placeholder="caption" />
       <br />
