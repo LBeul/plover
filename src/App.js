@@ -11,7 +11,7 @@ class App extends React.Component {
         <Header />
         <InputBox />
         <CoverPreview
-          artist="Angelo Burlesconi"
+          artist="Skibidi Babab"
           image="https://dummyimage.com/300x300/000000/cde5e3&text=dummy"
           artistLink="#"
         />
