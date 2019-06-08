@@ -1,21 +1,23 @@
 import React from "react";
 import "./App.css";
-import Header from "./Header.js";
-import InputBox from "./InputBox.js";
-import CoverPreview from "./CoverPreview.js";
+import Header from "./components/Header.js";
+import InputBox from "./components/InputBox.js";
+import CoverPreview from "./components/CoverPreview.js";
 
-function App() {
-  return (
-    <div className="app">
-      <Header />
-      <InputBox />
-      <CoverPreview
-        artist="Angelo Burlesconi"
-        image="https://dummyimage.com/300x300/000000/cde5e3&text=dummy"
-        artistLink="#"
-      />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="app">
+        <Header />
+        <InputBox />
+        <CoverPreview
+          artist="Angelo Burlesconi"
+          image="https://dummyimage.com/300x300/000000/cde5e3&text=dummy"
+          artistLink="#"
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
