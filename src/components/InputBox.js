@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import "../styles/InputBox.css";
 
-class InputBox extends React.Component {
+class InputBox extends Component {
   render() {
     return (
       <div className="input-box">

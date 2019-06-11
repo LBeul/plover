@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import "../styles/CoverPreview.css";
 
-class CoverPreview extends React.Component {
+class CoverPreview extends Component {
   render(props) {
     return (
       <div className="cover-prev">

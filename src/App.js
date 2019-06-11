@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/Header.js";
 import InputBox from "./components/InputBox.js";
 import CoverPreview from "./components/CoverPreview.js";
 
-class App extends React.Component {
+class App extends Component {
   constructor() {
     super();
     // Initialize the state
