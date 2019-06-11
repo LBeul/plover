@@ -7,10 +7,13 @@ import CoverPreview from "./components/CoverPreview.js";
 class App extends React.Component {
   constructor() {
     super();
+    // Initialize the state
     this.state = { ticker: 0 };
+    // Bind the handleClick() function to this component
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
+    // On click, increment state.ticker by 1
     this.setState({ ticker: this.state.ticker + 1 });
     console.log("state is " + this.state.ticker);
   }
