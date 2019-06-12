@@ -13,21 +13,26 @@
 input {
   width: 80%;
   height: 30px;
-  background-color: #202121;
-  border-radius: 10px;
-  border: 1px solid #1db954;
+  background-color: #191414;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #1db954;
   text-align: center;
   font-size: 1em;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
+::placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
 
 button {
   width: 80%;
   height: 40px;
-  background-color: #1db954;
+  background-color: #191414;
   border-radius: 10px;
-  border: none;
+  border: 1px solid #1db954;
   color: #fff;
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;

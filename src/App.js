@@ -24,7 +24,7 @@ class App extends Component {
         <InputBox handleClick={this.handleClick} />
         <CoverPreview
           artist="Skibidi Babab"
-          image="https://dummyimage.com/300x300/000000/cde5e3&text=dummy"
+          image="https://placekitten.com/g/300/300"
           artistLink="#"
         />
       </div>

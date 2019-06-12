@@ -8,7 +8,7 @@ class CoverPreview extends Component {
         {/* Picture result based on searched topic */}
         <img src={this.props.image} alt="Your Cover!" />
         {/* Reference according to unsplash API guidelines */}
-        <p>
+        <p className="credits">
           Picture by <a href={this.props.artistLink}>{this.props.artist}</a>{" "}
           from <a href="https://unsplash.com/">Unsplash</a>
         </p>
