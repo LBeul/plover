@@ -4,16 +4,24 @@ import "../styles/InputBox.css";
 class InputBox extends Component {
   render() {
     return (
-      <div className="input-box">
+      <form className="input-box" onSubmit={this.props.handleSubmit}>
         {/* Topic input for image search */}
-        <input type="text" placeholder="topic" />
+        <input
+          type="text"
+          placeholder="topic"
+          onChange={this.props.handleTopicInput}
+        />
         <br />
         {/* Caption aka name of playlist */}
-        <input type="text" placeholder="caption" />
+        <input
+          type="text"
+          placeholder="caption"
+          onChange={this.props.handleCaptionInput}
+        />
         <br />
         {/* Button that triggers the handleClick function given as props */}
-        <button onClick={this.props.handleClick}>Generate!</button>
-      </div>
+        <input id="button" type="submit" value="Generate!" />
+      </form>
     );
   }
 }

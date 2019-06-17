@@ -8,20 +8,35 @@ class App extends Component {
   constructor() {
     super();
     // Initialize the state
-    this.state = { ticker: 0 };
+    this.state = { topic: "", caption: "" };
     // Bind the handleClick() function to this component
-    this.handleClick = this.handleClick.bind(this);
+    this.handleTopicInput = this.handleTopicInput.bind(this);
+    this.handleCaptionInput = this.handleCaptionInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleClick() {
-    // On click, increment state.ticker by 1
-    this.setState({ ticker: this.state.ticker + 1 });
-    console.log("state is " + this.state.ticker);
+
+  handleTopicInput(event) {
+    this.setState({ topic: event.target.value });
   }
+
+  handleCaptionInput(event) {
+    this.setState({ caption: event.target.value });
+  }
+
+  handleSubmit(event) {
+    console.log(this.state);
+    event.preventDefault();
+  }
+
   render() {
     return (
       <div className="app">
         <Header />
-        <InputBox handleClick={this.handleClick} />
+        <InputBox
+          handleTopicInput={this.handleTopicInput}
+          handleCaptionInput={this.handleCaptionInput}
+          handleSubmit={this.handleSubmit}
+        />
         <CoverPreview
           artist="Skibidi Babab"
           image="https://placekitten.com/g/300/300"

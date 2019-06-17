@@ -27,7 +27,8 @@ input {
   opacity: 1; /* Firefox */
 }
 
-button {
+button,
+#button {
   width: 80%;
   height: 40px;
   background-color: #191414;
