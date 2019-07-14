@@ -62,7 +62,7 @@ class App extends Component {
               ? this.state.image.urls.small
               : "https://www.kawasaki-india.com/wp-content/uploads/2017/12/color-2.jpg"
           }
-          artistLink={this.state.image ? this.state.image.user.links.self : "#"}
+          artistLink={this.state.image ? this.state.image.user.links.html : "#"}
         />
       </div>
     );
