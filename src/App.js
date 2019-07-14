@@ -9,24 +9,20 @@ class App extends Component {
     super();
     // Initialize the state
     this.state = { topic: "", caption: "" };
-    // Bind the handleClick() function to this component
-    this.handleTopicInput = this.handleTopicInput.bind(this);
-    this.handleCaptionInput = this.handleCaptionInput.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleTopicInput(event) {
+  handleTopicInput = event => {
     this.setState({ topic: event.target.value });
-  }
+  };
 
-  handleCaptionInput(event) {
+  handleCaptionInput = event => {
     this.setState({ caption: event.target.value });
-  }
+  };
 
-  handleSubmit(event) {
+  handleSubmit = event => {
     console.log(this.state);
     event.preventDefault();
-  }
+  };
 
   render() {
     return (
@@ -39,7 +35,7 @@ class App extends Component {
         />
         <CoverPreview
           artist="Skibidi Babab"
-          image="https://placekitten.com/g/300/300"
+          image="https://picsum.photos/300"
           artistLink="#"
         />
       </div>
