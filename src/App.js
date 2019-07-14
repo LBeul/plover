@@ -1,27 +1,41 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./components/Header.js";
-import InputBox from "./components/InputBox.js";
-import CoverPreview from "./components/CoverPreview.js";
+import Header from "./components/Header";
+import InputBox from "./components/InputBox";
+import CoverPreview from "./components/CoverPreview";
+import keys from "./keys";
 
 class App extends Component {
   constructor() {
     super();
     // Initialize the state
-    this.state = { topic: "", caption: "" };
+    this.state = { topic: "", caption: "", image: "" };
   }
-
+  // Function that handles topic input
   handleTopicInput = event => {
     this.setState({ topic: event.target.value });
   };
-
+  // Function that handles caption input
   handleCaptionInput = event => {
     this.setState({ caption: event.target.value });
   };
-
+  // Function that handles submit
   handleSubmit = event => {
-    console.log(this.state);
     event.preventDefault();
+    if (this.state.topic !== "") {
+      fetch(
+        `https://api.unsplash.com/search/photos?query=${
+          this.state.topic
+        }&orientation=squarish`,
+        {
+          headers: {
+            Authorization: `Client-ID ${keys.unsplashAccessKey}`
+          }
+        }
+      )
+        .then(result => result.json())
+        .then(data => this.setState({ image: data.results[0] }));
+    }
   };
 
   render() {
@@ -34,8 +48,12 @@ class App extends Component {
           handleSubmit={this.handleSubmit}
         />
         <CoverPreview
-          artist="Skibidi Babab"
-          image="https://picsum.photos/300"
+          artist="xyz"
+          image={
+            this.state.image
+              ? this.state.image.urls.small
+              : "https://www.kawasaki-india.com/wp-content/uploads/2017/12/color-2.jpg"
+          }
           artistLink="#"
         />
       </div>
