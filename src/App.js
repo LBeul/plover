@@ -34,7 +34,13 @@ class App extends Component {
         }
       )
         .then(result => result.json())
-        .then(data => this.setState({ image: data.results[0] }));
+        .then(data => {
+          if (data.results.length !== 0) {
+            this.setState({ image: data.results[0] });
+          } else {
+            this.setState({ image: null });
+          }
+        });
     }
   };
 
@@ -48,13 +54,15 @@ class App extends Component {
           handleSubmit={this.handleSubmit}
         />
         <CoverPreview
-          artist="xyz"
+          artist={
+            this.state.image ? this.state.image.user.username : "Some Guy"
+          }
           image={
             this.state.image
               ? this.state.image.urls.small
               : "https://www.kawasaki-india.com/wp-content/uploads/2017/12/color-2.jpg"
           }
-          artistLink="#"
+          artistLink={this.state.image ? this.state.image.user.links.self : "#"}
         />
       </div>
     );
