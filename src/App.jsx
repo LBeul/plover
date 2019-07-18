@@ -36,7 +36,10 @@ class App extends Component {
         .then(result => result.json())
         .then(data => {
           if (data.results.length !== 0) {
-            this.setState({ image: data.results[0] });
+            this.setState({
+              image:
+                data.results[Math.floor(Math.random() * data.results.length)]
+            });
           } else {
             this.setState({ image: null });
           }
