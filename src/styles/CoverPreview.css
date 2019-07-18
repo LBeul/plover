@@ -10,6 +10,8 @@ p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: #fff;
+  text-align: center;
+  width: 300px;
 }
 
 a {
