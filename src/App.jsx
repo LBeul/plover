@@ -44,6 +44,8 @@ class App extends Component {
     }
   };
 
+  // TODO: Need some sort of feedback if the "topic" input shows no results!
+
   render() {
     return (
       <div className="app">
