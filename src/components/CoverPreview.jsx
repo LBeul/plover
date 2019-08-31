@@ -1,21 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import "../styles/CoverPreview.css";
 
-class CoverPreview extends Component {
-  render(props) {
-    return (
-      <div className="cover-prev">
-        {/* Picture result based on searched topic */}
-        <img src={this.props.image} alt="Your Cover!" />
-        {/* Reference according to unsplash API guidelines */}
-        <p className="credits">
-          Picture by <a href={this.props.artistLink}>{this.props.artist}</a>{" "}
-          from <a href="https://unsplash.com/">Unsplash</a>
-        </p>
-        <button>Download!</button>
-      </div>
-    );
-  }
+function CoverPreview(props) {
+  return (
+    <div className="cover-prev">
+      {/* Picture result based on searched topic */}
+      <img src={props.image} alt="Your Cover!" />
+      {/* Reference according to unsplash API guidelines */}
+      <p className="credits">
+        Picture by <a href={props.artistLink}>{props.artist}</a> from{" "}
+        <a href="https://unsplash.com/">Unsplash</a>
+      </p>
+      <button>Download!</button>
+    </div>
+  );
 }
 
 export default CoverPreview;
