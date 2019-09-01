@@ -5,6 +5,8 @@ import InputBox from "./components/InputBox";
 import CoverPreview from "./components/CoverPreview";
 import keys from "./keys";
 
+let captionText = "";
+
 const App = () => {
   const [topic, setTopic] = useState("");
   const [caption, setCaption] = useState("");
@@ -15,7 +17,6 @@ const App = () => {
     setTopic(event.target.value);
   };
   // Function that handles caption input
-  let captionText = "";
   const handleCaptionInput = event => {
     captionText = event.target.value;
   };
