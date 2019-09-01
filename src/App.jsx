@@ -15,8 +15,9 @@ const App = () => {
     setTopic(event.target.value);
   };
   // Function that handles caption input
+  let captionText = "";
   const handleCaptionInput = event => {
-    setCaption(event.target.value);
+    captionText = event.target.value;
   };
   // Function that handles submit
   const handleSubmit = event => {
@@ -40,6 +41,7 @@ const App = () => {
             setImage(null);
           }
         });
+      setCaption(captionText);
     }
   };
 
@@ -54,12 +56,13 @@ const App = () => {
         handleSubmit={handleSubmit}
       />
       <CoverPreview
-        artist={image ? image.user.username : "Some Guy"}
         image={
           image
             ? image.urls.small
             : "https://www.kawasaki-india.com/wp-content/uploads/2017/12/color-2.jpg"
         }
+        caption={caption}
+        artist={image ? image.user.username : "Some Guy"}
         artistLink={image ? image.user.links.html : "#"}
       />
     </div>

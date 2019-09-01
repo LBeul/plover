@@ -8,7 +8,12 @@ function InputBox({ handleSubmit, handleTopicInput, handleCaptionInput }) {
       <input type="text" placeholder="topic" onChange={handleTopicInput} />
       <br />
       {/* Caption aka name of playlist */}
-      <input type="text" placeholder="caption" onChange={handleCaptionInput} />
+      <input
+        type="text"
+        placeholder="caption"
+        maxLength="13"
+        onChange={handleCaptionInput}
+      />
       <br />
       {/* Button that triggers the handleClick function given as props */}
       <input id="button" type="submit" value="Generate!" />

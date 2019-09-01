@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 }
 
 p {
@@ -27,4 +28,15 @@ img {
   height: 300px;
   object-fit: cover;
   filter: brightness(0.75);
+}
+.caption-text {
+  position: absolute;
+  font-weight: 800;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.75);
 }

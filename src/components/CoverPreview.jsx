@@ -1,15 +1,16 @@
 import React from "react";
 import "../styles/CoverPreview.css";
 
-function CoverPreview({ image, artistLink, artist }) {
+function CoverPreview({ image, artistLink, artist, caption }) {
   return (
     <div className="cover-prev">
       {/* Picture result based on searched topic */}
       <img src={image} alt="Your Cover!" />
       {/* Reference according to unsplash API guidelines */}
+      <div className="caption-text">{caption}</div>
       <p className="credits">
-        Picture by <a href={artistLink}>{artist}</a> from{" "}
-        <a href="https://unsplash.com/">Unsplash</a>
+        Picture by <a href={artistLink}>{artist}</a> from
+        <a href="https://unsplash.com/"> Unsplash</a>
       </p>
       <button>Download!</button>
     </div>
