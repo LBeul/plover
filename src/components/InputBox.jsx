@@ -5,13 +5,13 @@ function InputBox({ handleSubmit, handleTopicInput, handleCaptionInput }) {
   return (
     <form className="input-box" onSubmit={handleSubmit}>
       {/* Topic input for image search */}
-      <input type="text" placeholder="topic" onChange={handleTopicInput} />
+      <input type="text" placeholder="keyword" onChange={handleTopicInput} />
       <br />
       {/* Caption aka name of playlist */}
       <input
         type="text"
         placeholder="caption"
-        maxLength="13"
+        maxLength="12"
         onChange={handleCaptionInput}
       />
       <br />
