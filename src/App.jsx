@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import InputBox from "./components/InputBox";
 import CoverPreview from "./components/CoverPreview";
 import keys from "./keys";
+import html2canvas from "html2canvas";
 
 let captionText = "";
 
@@ -20,6 +21,7 @@ const App = () => {
   const handleCaptionInput = event => {
     captionText = event.target.value;
   };
+
   // Function that handles submit
   const handleSubmit = event => {
     event.preventDefault();
@@ -41,8 +43,13 @@ const App = () => {
           } else {
             setImage(null);
           }
-        });
-      setCaption(captionText);
+        })
+        .then(setCaption(captionText))
+        .then(
+          html2canvas(document.querySelector("#testimg")).then(canvas => {
+            document.body.appendChild(canvas);
+          })
+        );
     }
   };
 
