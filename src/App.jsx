@@ -46,7 +46,7 @@ const App = () => {
         })
         .then(setCaption(captionText))
         .then(
-          html2canvas(document.querySelector("#testimg")).then(canvas => {
+          html2canvas(document.querySelector("#cover-wrapper")).then(canvas => {
             document.body.appendChild(canvas);
           })
         );

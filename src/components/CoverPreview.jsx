@@ -7,7 +7,7 @@ function CoverPreview({ image, artistLink, artist, caption }) {
       {/* Wrap Picture & Caption into one div */}
       <div id="cover-wrapper">
         {/* Picture result based on searched topic */}
-        <img src={image} id="testimg" alt="Your Cover!" />
+        <img src={image} alt="Your Cover!" />
         {/* Reference according to unsplash API guidelines */}
         <div className="caption-text">{caption}</div>
       </div>
