@@ -53,7 +53,7 @@ const App = () => {
     }
   };
 
-  // TODO: Need some sort of feedback if the "topic" input shows no results! Maybe through hook?
+  // TODO: Need some sort of feedback if the "topic" input shows no results!
 
   return (
     <div className="app">
