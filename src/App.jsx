@@ -9,13 +9,13 @@ import html2canvas from "html2canvas";
 let captionText = "";
 
 const App = () => {
-  const [topic, setTopic] = useState("");
+  const [keyword, setKeyword] = useState("");
   const [caption, setCaption] = useState("");
   const [image, setImage] = useState("");
 
-  // Function that handles topic input
-  const handleTopicInput = event => {
-    setTopic(event.target.value);
+  // Function that handles keyword input
+  const handleKeywordInput = event => {
+    setKeyword(event.target.value);
   };
   // Function that handles caption input
   const handleCaptionInput = event => {
@@ -25,9 +25,9 @@ const App = () => {
   // Function that handles submit
   const handleSubmit = event => {
     event.preventDefault();
-    if (topic !== "") {
+    if (keyword !== "") {
       fetch(
-        `https://api.unsplash.com/search/photos?query=${topic}&orientation=squarish`,
+        `https://api.unsplash.com/search/photos?query=${keyword}&orientation=squarish`,
         {
           headers: {
             Authorization: `Client-ID ${keys.unsplashAccessKey}`
@@ -42,6 +42,7 @@ const App = () => {
             );
           } else {
             setImage(null);
+            alert("No pictures found... Try another keyword!");
           }
         })
         .then(setCaption(captionText))
@@ -53,13 +54,13 @@ const App = () => {
     }
   };
 
-  // TODO: Need some sort of feedback if the "topic" input shows no results!
+  // TODO: Need some sort of feedback if the "Keyword" input shows no results!
 
   return (
     <div className="app">
       <Header />
       <InputBox
-        handleTopicInput={handleTopicInput}
+        handleKeywordInput={handleKeywordInput}
         handleCaptionInput={handleCaptionInput}
         handleSubmit={handleSubmit}
       />

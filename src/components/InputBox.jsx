@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/InputBox.css";
 
-function InputBox({ handleSubmit, handleTopicInput, handleCaptionInput }) {
+function InputBox({ handleSubmit, handleKeywordInput, handleCaptionInput }) {
   return (
     <form className="input-box" onSubmit={handleSubmit}>
-      {/* Topic input for image search */}
-      <input type="text" placeholder="keyword" onChange={handleTopicInput} />
+      {/* Keyword input for image search */}
+      <input type="text" placeholder="keyword" onChange={handleKeywordInput} />
       <br />
       {/* Caption aka name of playlist */}
       <input
