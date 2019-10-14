@@ -3,7 +3,7 @@
 This is my first own React App. Throughout the process of building it, I want to learn the principles of dealing not only with React, but also backend development, APIs and object orientation.
 
 **By now it looks like that:**
-![Screenshot of Plover](https://github.com/LBeul/plover/blob/master/github_info/screenshot_small.png?raw=true "Plover")
+![Screenshot of Plover](https://github.com/LBeul/plover/blob/master/github_info/screenshot.png?raw=true "Plover")
 
 _This is App is still in development._
 
