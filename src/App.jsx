@@ -49,6 +49,7 @@ const App = () => {
         .then(
           html2canvas(document.querySelector("#cover-wrapper")).then(canvas => {
             document.body.appendChild(canvas);
+            console.log(canvas);
           })
         );
     }
