@@ -13,27 +13,27 @@ const App = () => {
   const [image, setImage] = useState("");
 
   // Function that handles topic input
-  const handleTopicInput = event => {
+  const handleTopicInput = (event) => {
     setTopic(event.target.value);
   };
   // Function that handles caption input
-  const handleCaptionInput = event => {
+  const handleCaptionInput = (event) => {
     captionText = event.target.value;
   };
   // Function that handles submit
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (topic !== "") {
       fetch(
         `https://api.unsplash.com/search/photos?query=${topic}&orientation=squarish`,
         {
           headers: {
-            Authorization: `Client-ID ${keys.unsplashAccessKey}`
-          }
+            Authorization: `Client-ID ${keys.unsplashAccessKey}`,
+          },
         }
       )
-        .then(result => result.json())
-        .then(data => {
+        .then((result) => result.json())
+        .then((data) => {
           if (data.results.length !== 0) {
             setImage(
               data.results[Math.floor(Math.random() * data.results.length)]
@@ -46,7 +46,7 @@ const App = () => {
     }
   };
 
-  // TODO: Need some sort of feedback if the "topic" input shows no results! Maybe through hook?
+  // TODO: Loading Indicator & Handler for network errors
 
   return (
     <div className="app">
