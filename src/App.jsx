@@ -57,11 +57,7 @@ const App = () => {
         handleSubmit={handleSubmit}
       />
       <CoverPreview
-        image={
-          image
-            ? image.urls.small
-            : "https://www.kawasaki-india.com/wp-content/uploads/2017/12/color-2.jpg"
-        }
+        image={image ? image.urls.small : "https://via.placeholder.com/300"}
         caption={caption}
         artist={image ? image.user.username : "Some Guy"}
         artistLink={image ? image.user.links.html : "#"}
